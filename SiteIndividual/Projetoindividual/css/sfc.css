@@ -1,0 +1,450 @@
+body{
+
+    padding: 0;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+}
+/* align items organizar de forma vertical, justify content alinhar de forma horizontal, 
+space around distribui de forma igual no espaço os itens, list style tira as bolinhas que organizam */
+
+.container{
+ width: 80%;
+ margin: 0 auto;
+}
+
+.header{
+    color: #ddec08;
+    border-bottom: 3px solid #ddec08 ;
+}
+
+.header  .container{
+display: flex;
+justify-content: space-between;
+}
+
+.selecionado {
+    font-weight: bold;
+}
+.navbar{
+    width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.header a {
+    text-decoration: none;
+    color: #ddec08 ;
+}
+.banner {
+    color: white;
+    height: 635px;
+    background-image: url("../assets/Vila-Belmiro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 80px;
+}
+.banner .container {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    
+}
+.banner p{
+    margin: 0%;
+    padding: 0;
+    width: 280px;
+    font-size: 36px;
+    margin-left: 350px;
+    font-family: Bradley Hand, cursive;
+}
+.social{
+    background-color: black;
+    padding: 50px 0;
+
+}
+.social .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+                                                                                                                                   
+.social h2{
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px ;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    color: #E6005A;
+    margin: 0;
+}
+.social .boxes {
+    display: flex;
+
+}
+.social .box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+    
+}
+
+.social .box img{
+    width: 150px;
+    align-self: center;
+}
+.social .titulo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+.umbro{
+    height: 50px;
+    width: 100px;
+    margin-left: 50px;
+    margin-top: 20px;
+   background-image: url("../assets/umbroimg.png");
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.escudo{
+    height: 100px;
+    width: 90px;
+    margin-top: 10px;
+   background-image: url("../assets/mascotesfc.jpg"); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin-right: 30px;
+   padding-left: 30px;
+   margin-left: 0px;
+   border-radius: 10px;
+}
+.container p{
+    background-color: #ddec08 ;
+  border: 5px solid black;
+  color: black;
+  font-family: Bradley Hand, cursive;
+  
+}
+
+.box h4  {
+    color: white;
+}
+.box p{
+color: black;
+border: 5px, solid white;
+}
+.titulo h2{
+    color: black;
+    border: 3px solid #ddec08;
+}
+
+.banner-login .container-cadastro {
+    justify-content: center;
+    padding-bottom: 400px;
+    text-align: center;
+    margin-left: 30%;
+    
+}
+.btn{
+    margin-top: 50px;
+    border-style: solid;
+    border-radius: 20px;
+   background-color: #0000;
+   font-weight: bolder;
+   
+}
+.footer {
+    background-color: #0000;
+    width: 100%;
+    color: #ddec08;
+    font-size: larger;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 50px;
+}
+
+.footercadastro {
+    background-color: #0000;
+    width:100vw;
+    color: #ddec08;
+    font-size: larger;
+    text-align: center;
+    display: flex;
+    border: solid 3px #ddec08;
+    margin-bottom: 0;
+    margin-top: 0;
+    
+}
+
+.banner-login .container-cadastro{
+        color: black;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 33%;
+        
+}
+.card-medio{
+    background-color: #ddec08;
+    margin-top: 20%;
+    border: 5px solid black;
+    text-align: center;
+    
+}
+
+.box p{
+    border-radius: 2px solid white;
+}
+.btn{
+background: black;
+
+color: white;
+
+border-style: outset;
+
+border: 5px;
+
+border-color: #ffff;
+
+height: 50px;
+
+width: 100px;
+
+font: bold 15px arial, sans-serif;
+
+text-shadow:none;
+
+margin-bottom: 10px;
+}
+.container h1{
+    font-family: Bradley Hand, cursive;
+}
+.card-medio form input{  
+border-radius: 30px;
+margin-top: 10px;
+border: none;
+background-color: grey;
+height: 30px; 
+width: 200px;
+}
+.card-medio form input::placeholder{
+
+    color: white
+}
+ .inones a{
+     margin: 0px 10px;   
+     color: #fff;
+     height: 50px;
+     width: 50px;
+     font-size: 30px;
+ 
+ }
+ .quiz-container input{
+     border: 5px solid black;
+     margin-top: 10px;
+     height: 30px;
+     width: 200px;
+     margin-bottom: 10px;
+ }
+ .quiz-container input::placeholder{
+     color: white;
+ }
+.btnquiz{
+    
+        background: black;
+        
+        color: white;
+        
+        border-style: outset;
+        
+        border: 5px;
+        
+        border-color: #ffff;
+        
+        height: 40px;
+        
+        width: 100px;
+        
+        font-family: Bradley Hand, cursive;
+        
+        font-size: 12px;
+        
+        text-shadow:none;
+
+        text-align: center; 
+
+
+    
+        }
+        .footer-quiz {
+    background-color: #0000;
+    width:99.5%;
+    color: #ddec08;
+    font-size: larger;
+    text-align: center;
+    display: flex;
+    border: solid 3px #ddec08;
+    margin-top: 65px;
+
+        }
+        .footer-quiz .container {
+            text-align: center;
+            height: 60px;
+            justify-content: center;
+        }
+        .loading-div {
+            width: 50px;
+            /* border: 3px solid pink; */
+            margin: auto;
+            display: none;
+          }
+          
+          .loading-div img {
+            height: 50px;
+            width: 50px;
+          }
+          .card-medio .formulario {
+
+            justify-content: center;
+            
+            color: black;
+          }
+          .card-medio h2{
+              color: black;
+          }
+      .card-medio img{
+          height: 150px;
+          width: 100;
+          margin-right: 10px;
+          border-radius: 20px;
+          
+      }
+      .card-medio p{
+          text-align: center;
+          font-size: small;
+          margin-right: 300px;
+      }
+.footertitulos {
+    
+        background-color: #0000;
+        width:99.5%;
+        color: #ddec08;
+        font-size: larger;
+        text-align: center;
+        border: solid 3px #ddec08;
+        margin-top: 485px;
+    
+        
+    
+}
+.card-medio .container {
+    justify-content: center;
+
+}
+.footerlogin{
+    background-color: #0000;
+    width:99.5%;
+    color: #ddec08;
+    font-size: larger;
+    text-align: center;
+    border: solid 3px #ddec08;
+    
+
+    
+}
+.banner-titulos{
+    color: white;
+    height: 700px;
+    background-image: url("../assets/Vila-Belmiro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom:  200px; ;
+
+
+}
+.container .card-medio{
+
+margin-bottom: 100px; 
+border-radius: 30px;  }
+
+.container-cadastro .card-medio{
+
+border-radius: 30px; 
+}
+.card-titulos img{
+height: 200px;
+width: 200px;
+border-radius: 30px;
+margin-left: 100px;
+
+}
+.card-titulos p{
+    font-size: small;
+    color: black;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+.card-titulos{
+    background-color: #ddec08;
+    border: 5px solid black;
+    margin-top: 50px;
+    border-radius: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    
+    
+} .banner-titulos {
+    
+        width: 100%;
+        height: 1000px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+       
+        
+        
+        
+    
+}
+.mensagem{
+    height: 100px;
+    width:1340px;
+    background-color: black;
+    border-radius: 10px;
+    border: solid #ddec08;
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+.footerfotos{
+    background-color: #0000;
+    width:99.5%;
+    color: #ddec08;
+    font-size: larger;
+    text-align: center;
+    border: solid 3px #ddec08;
+    margin-top: 610px;
+}
+
+.btnquiz:hover{
+transition: 0.3s;
+color: black;
+background-color: white;
+}
+
+.inones i:hover{
+    transition: 0.3s;
+    color: #ddec08;
+}
