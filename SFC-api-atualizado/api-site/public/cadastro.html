@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>O mar está pra peixe!</title>
+    <link rel="stylesheet" href="./css/sfc.css">
+    <link rel="shortcut icon" href="./assets/mascotesfc.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/451870fbf6.js" crossorigin="anonymous"></script>
+    <script src="./js/funcoes.js"></script>
+</head>
+<body>
+    <div class="header">
+    
+        <div class="container">
+            <a href="./index.html"><div class="escudo"></div></a>
+      
+            <h1 class="titulo">O mar está pra peixe! </h1>
+             <ul class="navbar">
+          
+                <li><a href="./index.html">Página inicial </a></li>
+                <li><a href="./titulossfc.html">Titulos</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li class="selecionado"><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+            <div class="umbro"></div>
+      </div>
+    </div>
+    
+    <div class="banner">
+    
+        <div class="banner-login ">
+            <div class="container ">
+                <div class="card-medio">
+                    <h2>Cadastre seu e-mail e fique por dentro das novidades!</h2>
+                    <div class="formulario">
+                            Nome:
+                            <br>
+                            <input id="nome_input" type="text" placeholder="Ada Lovelace">
+                            <br>
+                            <br>
+                            E-mail:
+                            <br>
+                            <input id="email_input" type="text" placeholder="meuemail@provedor.com">
+                            <br>
+                            <br>
+                            Time favorito do Santos:
+                            <br>
+                            <input id="timefav" type="text" placeholder="Insira o ano">
+                            <br>
+                            <br>
+                            Senha:
+                            <br>
+                            <input id="senha_input" type="password" placeholder="******">
+                            <br>
+                            <br>
+                            Confirmação da Senha:
+                            <br>
+                            <input id="confirmacao_senha_input" type="password" placeholder="******">
+                            <br>
+                            <br>
+                            <button class="btn" onclick="cadastrar()">Cadastrar</button>
+                    
+                    </div>
+                    <div id="div_aguardar" class="loading-div">
+                        <img src="./assets/circle-loading.gif" id="loading-gif">
+                    </div>
+    
+                    <div id="div_erros_login">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footercadastro">
+        <div class="container">   
+             <h4>Feito por Gustavo Costa aluno Bandtec e torcedor do peixe, vai pra cima deles Santos!</h4>
+             <div class="inones">
+                <a href="https://www.linkedin.com/in/gustavo-carneiro-090527180"><i class="fab fa-linkedin"></i></i></a>
+                <a href="https://github.com/GustaCosta"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/gu.costa__/"><i class="fab fa-instagram"></i></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+</body>
+
+</html>
+
+<script>
+
+    function cadastrar() {
+        aguardar();
+
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var timeVar = timefav.value;
+        console.log(timeVar);
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || timeVar =="") {
+
+            window.alert("Preencha todos os campos para prosseguir!");
+            if (nomeVar == "") {
+                console.log('nome está em branco')
+            }
+            if (emailVar == "") {
+                console.log('email está em branco')
+            }
+            if (senhaVar == "") {
+                console.log('senha está em branco')
+            }
+            if (confirmacaoSenhaVar == "") {
+                console.log('confirmacaoSenha está em branco')
+            }
+            if (timeVar == "") {
+                console.log('ano favorito do Santos em branco')
+            }
+            finalizarAguardar();
+            return false;
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+            finalizarAguardar();
+            return false;
+        }
+
+        if (senhaVar != confirmacaoSenhaVar) {
+            window.alert("As senhas inseridas devem ser iguais para prosseguir!");
+            finalizarAguardar();
+            return false;
+        }
+
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                timeServer: timeVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "login.html";
+                
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+</script>

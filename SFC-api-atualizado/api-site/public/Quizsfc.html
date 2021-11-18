@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O mar está para peixe?</title>
+    <link rel="stylesheet" href="./css/sfc.css">
+    <link rel="shortcut icon" href="./assets/mascotesfc.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/451870fbf6.js" crossorigin="anonymous"></script>
+    <script src="./js/funcoes.js"></script>
+</head>
+<body>
+    <div class="header">
+    
+        <div class="container">
+            <a href="./index.html"><div class="escudo"></div></a>
+      
+            <h1 class="titulo">O mar está pra peixe!</h1>
+             <ul class="navbar">
+          
+                <li><a href="./index.html">Página inicial </a></li>
+                <li><a href="./titulossfc.html">Titulos </a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+            <div class="umbro"></div>
+      </div>
+    </div>
+    <div class="banner">
+        <div class="banner-login">
+            <div class="container-cadastro">
+                <div class="card-medio">
+                    <h2>Você é realmente santista? Vamos ver!</h2>
+                    <div class="quiz-container">
+                        <div style="display: block;" id="perguntaum">Contra qual time o santos foi campeão da libertadores 2011?
+                           <input  type="text" id="respum"> <button class="btnquiz" onclick="enviarum()">Enviar resposta</button>
+                        </div>
+                     
+                        <div style="display: none;" id="perguntadois">A faixa de capitão do santos tem um Z por qual motivo?
+                         <input type="text" id="respdois"> <button class="btnquiz" onclick="enviardois()">Enviar resposta</button>
+                      </div>
+                     
+                      <div style="display: none;" id="perguntatres">Segundo Muricy Ramalho nas categorias de base havia um jogador que se destacava mais que o Neymar Jr, quem era?
+                         <input type="text" id="resptres"> <button class="btnquiz" onclick="enviartres()">Enviar resposta</button>
+                      </div>
+                     
+                      <div style="display: none;" id="perguntaquatro">Qual ano o Santos Futebol Clube foi fundado?
+                         <input   type="text" id="respquatro"> <button class="btnquiz" onclick="enviarquatro()">Enviar resposta</button>
+                      </div>
+                     
+                      <div style="display: none;" id="perguntacinco">Qual foi o jogador responsável pela maior venda da história do santos, 
+                         aproximadamente R$193.000.000,00 ?
+                         <input placeholder="insira aqui sua resposta" type="text" id="respcinco"> <button class="btnquiz" onclick="enviarcinco()">Enviar resposta</button>
+                      </div>
+                     
+                       <div style="display: none;" id="resulta">
+                    <a href="./fotossfc.html"><button class="btnquiz"></button></a> </div>
+                       
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="footer-quiz">
+            <div class="container">
+                <h4>Feito por Gustavo Costa aluno Bandtec e torcedor do peixe, vai pra cima deles Santos!</h4>
+                <div class="inones">
+                    <a href="https://www.linkedin.com/in/gustavo-carneiro-090527180"><i class="fab fa-linkedin"></i></i></a>
+                    <a href="https://github.com/GustaCosta"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/gu.costa__/"><i class="fab fa-instagram"></i></i></a>
+                </div>
+            </div>
+        </div>
+  
+</body>
+</html>
+<script>
+    var contador =0;
+    
+    var respostas = ['PEÑAROL', 'ZITO', 'GANSO', '1912', 'RODRYGO']
+
+    function enviarum(){
+
+        perguntaum.style.display = 'none';
+        perguntadois.style.display = 'block';
+
+        if(respum.value.toUpperCase() == respostas[0]){
+            contador++
+          
+        }
+    }
+    function enviardois(){
+        perguntadois.style.display = 'none';
+        perguntatres.style.display = 'block';
+
+        if(respdois.value.toUpperCase() == respostas [1]){
+            contador++
+        }
+    }
+    function enviartres(){
+        perguntatres.style.display = 'none';
+        perguntaquatro.style.display = 'block';
+
+        if(resptres.value.toUpperCase() == respostas[2]){
+            contador++
+        }
+    }
+    function enviarquatro(){
+        perguntaquatro.style.display = 'none';
+        perguntacinco.style.display ='block';
+        
+        if(respquatro.value.toUpperCase() == respostas[3]){
+            contador++
+        }
+    }
+
+function enviarcinco () {
+    perguntacinco.style.display='none';
+    
+    resulta.style.display = 'block';
+    if(respcinco.value.toUpperCase() == respostas[4]){
+            contador++
+        }
+
+    if(contador==4){
+
+    resulta.innerHTML = `Você acertou ${contador} Parabéns! Você acertou quase todas  <br> 
+     <img src="./assets/quatro.jpg" alt="">`}
+    if (contador<=3){
+        resulta.innerHTML = `Tem certeza que você é santista? Você acertou apenas ${contador}<br>  <img src="./assets/triste.jpg"style="height: 200px; width: 300px;" alt="">`
+    }
+    if(contador>4) {
+        resulta.innerHTML = `Ah, você é dos meus, você acertou tudo!! <br> 
+        <img src="./assets/comemoração.jpg" alt="">`
+    }
+
+}
+
+
+</script>
