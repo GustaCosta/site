@@ -143,6 +143,7 @@ border: 5px, solid white;
 .titulo h2{
     color: black;
     border: 3px solid #ddec08;
+    text-shadow: #fff 3em;
 }
 
 .banner-login .container-cadastro {
@@ -447,4 +448,22 @@ background-color: white;
 .inones i:hover{
     transition: 0.3s;
     color: #ddec08;
+}
+.formulario input{
+
+    border-radius: 30px;
+    height:40px;
+}
+.btn:hover{
+    transition: 0.3s;
+    color: black;
+    background-color: white;
+    }
+    .container p{
+        border-radius: 30px;
+        text-shadow: grey 0.1em 0.1em 0.1em;
+      }
+.formulario{
+    font-family: cursive;
+    font-size: small;
 }
