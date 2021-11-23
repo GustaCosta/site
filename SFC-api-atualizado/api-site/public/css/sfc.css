@@ -24,16 +24,23 @@ justify-content: space-between;
 
 .selecionado {
     font-weight: bold;
+    color: #fff;
 }
 .navbar{
+    margin-top: 50px;
     width: 600px;
     display: flex;
     justify-content: space-evenly;
     list-style: none;
 }
+.navbar a:hover{
+color: white;
+
+}
 .header a {
     text-decoration: none;
     color: #ddec08 ;
+    transition: 0.5S;
 }
 .banner {
     color: white;
@@ -97,6 +104,7 @@ justify-content: space-between;
 .social .box img{
     width: 150px;
     align-self: center;
+    border-radius: 5px;
 }
 .social .titulo{
     display: flex;
@@ -173,7 +181,7 @@ border: 5px, solid white;
 
 .footercadastro {
     background-color: #0000;
-    width:100vw;
+    width:98.3vw;
     color: #ddec08;
     font-size: larger;
     text-align: center;
@@ -193,7 +201,7 @@ border: 5px, solid white;
         
 }
 .card-medio{
-    background-color: #ddec08;
+    background-color: rgba(221, 236, 8, 0.8);
     margin-top: 20%;
     border: 5px solid black;
     text-align: center;
@@ -373,7 +381,10 @@ width: 200px;
 .container .card-medio{
 
 margin-bottom: 100px; 
-border-radius: 30px;  }
+border-radius: 30px;
+margin-left: 233px;
+margin-top: 310px;  
+}
 
 .container-cadastro .card-medio{
 
@@ -460,10 +471,26 @@ background-color: white;
     background-color: white;
     }
     .container p{
-        border-radius: 30px;
-        text-shadow: grey 0.1em 0.1em 0.1em;
+        border-radius: 10px;
+        text-shadow: rgb(173, 172, 172) 0.1em 0.1em 0.1em;
       }
 .formulario{
     font-family: cursive;
     font-size: small;
 }
+
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+   *::-webkit-scrollbar-thumb {
+    background-color: #ddec08;
+    border-radius: 20px;
+  
+  } 
