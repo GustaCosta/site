@@ -1,72 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="icon" href="./assets/icon/favicon.ico">
-
+    <link rel="stylesheet" href="css/sfc.css">
+    <link rel="shortcut icon" href="./assets/mascotesfc.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/451870fbf6.js" crossorigin="anonymous"></script>
     <script src="./js/funcoes.js"></script>
-
-    <title>HOME</title>
+    <title>O mar está pra peixe</title>
 </head>
-
-<body onload="validarSessao()">
-
-    <!--header inicio-->
-
-    <div class="side-header">
+<body>
+    <div class="header">
+    
         <div class="container">
-            <h1><span class="highlight">Projeto</span> IoT Revolucionário</h1>
-            <div class="usuario">
-                <h3>Olá, <b id="b_usuario"></b></h3>
+            <a href="./index.html"><div class="escudo"></div></a>
+      
+            <h1 class="titulo">O mar está pra peixe! </h1>
+             <ul class="navbar">
+          
+                <li><a href="./index.html">Página inicial </a></li>
+                <li><a href="./titulossfc.html">Titulos</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li class="selecionado"><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+            <div class="umbro"></div>
+      </div>
+    </div>
+    <div class="bannergrafico">
+        <div class="grafico">
+
+
+        <div class="grafic" id="piechart" style="width: 900px; height: 500px;"></div>
+    </div>
+
+
+
+    </div>
+    <div class="footergrafico">
+        <div class="container">   
+             <h4>Feito por Gustavo Costa aluno Bandtec e torcedor do peixe, vai pra cima deles Santos! <br> Todos os direitos reservados. &copy;2021</h4>
+             <div class="inones">
+                <a href="https://www.linkedin.com/in/gustavo-carneiro-090527180"><i class="fab fa-linkedin"></i></i></a>
+                <a href="https://github.com/GustaCosta"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/gu.costa__/"><i class="fab fa-instagram"></i></i></a>
             </div>
-            <div class="nav">
-                <ul>
-                    <li><a href="avisos.html">Postagem</a></li>
-                    <li><a href="tempo-real.html">Tempo Real</a></li>
-                    <li><a href="grafico-chartjs.html">Gráfico de histórico recente</a></li>
-                    <li><a href="#" class="highlight" onclick="limparSessao()">LOGOUT</a></li>
-                    <li><a href="pagina-estatica-chartsjs.html">
-                            <i class="show-on-hover">IR PARA PÁGINA GRÁFICO ESTÁTICO</i>
-                        </a></li>
-
-                </ul>
-            </div>
         </div>
     </div>
-    <!--header fim-->
-
-    <div class="corpo">
-        <div class="container">
-            <h1 id="h1_login_usuario"></h1>
-
-            <button onclick="mostrarModal()">Modal</button>
-
-            <a onclick="limparSessao()" href="login.html">Sair</a>
-        </div>
-    </div>
-
-    <div id="div_modal" class="div-modal">
-        <div id="modal_backdrop" onclick="fecharModal()" class="modal-backdrop">
-        </div>
-        <div id="modal_container" class="modal-container">
-            <button onclick="fecharModal()">fechar modal</button>
-        </div>
-    </div>
-
-    <div id="div_aguardar" class="div-aguardar">
-        <img src="./assets/aguarde-pink3.gif" id="img_aguarde">
-    </div>
-
+    
 </body>
-
 </html>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
 
-<script>
+  function drawChart() {
 
+    var data = google.visualization.arrayToDataTable([
+      ['Anos do Santos FC', 'Usuários'],
+      ['2010',     11],
+      ['1962',      2],
+      ['2002',  7],
+      ['2017', 2],
+      ['1999',    2]
+    ]);
 
+    var options = {
+      title: 'Melhores anos do Santos Futebol Clube'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+  }
 </script>

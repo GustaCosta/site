@@ -478,10 +478,7 @@ background-color: white;
     font-family: cursive;
     font-size: small;
 }
-
-  
-  /* Works on Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
+ *::-webkit-scrollbar {
     width: 12px;
   }
   
@@ -494,3 +491,25 @@ background-color: white;
     border-radius: 20px;
   
   } 
+  .bannergrafico{
+      width: 1354px;
+      height: 500px;
+      background-color: white;
+      border-radius: 0px;
+      justify-content: center;
+  }
+  .footergrafico{
+    background-color: #0000;
+    width:98.7vw;
+    color: #ddec08;
+    font-size: larger;
+    text-align: center;
+    display: flex;
+    border: solid 3px #ddec08;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .grafico{
+      justify-content: center;
+      margin-left: 300px;
+  }
