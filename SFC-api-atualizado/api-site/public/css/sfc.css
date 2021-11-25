@@ -54,6 +54,7 @@ color: white;
     height: 500px;
     display: flex;
     align-items: center;
+    padding: 5%;
     
 }
 .banner p{
@@ -138,6 +139,7 @@ color: white;
   border: 5px solid black;
   color: black;
   font-family: Bradley Hand, cursive;
+  padding: 1%;
   
 }
 
