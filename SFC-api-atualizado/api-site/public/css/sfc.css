@@ -284,11 +284,10 @@ width: 200px;
         font-family: Bradley Hand, cursive;
         
         font-size: 12px;
-        
         text-shadow:none;
-
         text-align: center; 
-
+        margin-bottom: 20px;
+        border-radius: 10px;
 
     
         }
@@ -298,14 +297,12 @@ width: 200px;
     color: #ddec08;
     font-size: larger;
     text-align: center;
-    display: flex;
     border: solid 3px #ddec08;
-    margin-top: 65px;
 
         }
-        .footer-quiz .container {
+        .footer-quiz {
             text-align: center;
-            height: 60px;
+            height: 140px;
             justify-content: center;
         }
         .loading-div {
@@ -439,6 +436,7 @@ margin-left: 100px;
     text-align: center;
     padding-bottom: 20px;
     margin-top: 10px;
+    margin-left: 5px;
 }
 .footerfotos{
     background-color: #0000;
@@ -447,7 +445,7 @@ margin-left: 100px;
     font-size: larger;
     text-align: center;
     border: solid 3px #ddec08;
-    margin-top: 610px;
+    margin-top: 925px;
 }
 
 .btnquiz:hover{
@@ -513,3 +511,87 @@ background-color: white;
       justify-content: center;
       margin-left: 300px;
   }
+  .quiz-container{
+      width: 700px;
+      height: 200px;
+  }
+  .bannerquiz{
+    color: white;
+    height: 829px;
+    background-image: url("../assets/Vila-Belmiro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+  .btnquizft{
+    background: black;
+        
+    color: white;
+    
+    border-style: outset;
+    
+    border: 5px;
+    
+    border-color: #ffff;
+    
+    height: 40px;
+    
+    width: 100px;
+    
+    font-family: Bradley Hand, cursive;
+    
+    font-size: 12px;
+    text-shadow:none;
+    text-align: center; 
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding-top: 10px;
+
+  }
+  .btnquizft:hover{
+    transition: 0.3s;
+    color: black;
+    background-color: white;
+    }
+.card-fotos img{
+        height: 150px;
+        width: 200px;
+        border-radius: 30px;
+        margin-left: 300px;
+        
+    } 
+        
+.card-fotos p{
+            font-size: small;
+            color: black;
+            margin-right: 20px;
+            justify-content: center;
+        }
+.card-fotos{
+            background-color: #ddec08;
+            border: 5px solid black;
+            margin-top: 100px;
+            border-radius: 15px;
+            margin-left: 20px;
+            margin-right: 20px;
+            width: 800px;
+        
+    }
+           
+.imagem img{
+            -webkit-transition: -webkit-transform .5s ease;
+            transition: transform .5s ease;
+            }
+.imagem:hover img{ -webkit-transform: scale(2.2);
+    transform: scale(2.2);
+
+}
+.banner-fotos{
+    color: white;
+    height: 400px;
+    background-image: url("../assets/Vila-Belmiro.jpg");
+    background-size: cover;
+    background-repeat:repeat-y;
+    margin-bottom: 30px;
+    background-color: #ddec08;
+} 

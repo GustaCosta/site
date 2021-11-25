@@ -27,49 +27,51 @@
             <div class="umbro"></div>
       </div>
     </div>
-    <div class="banner">
+    <div class="bannerquiz">
         <div class="banner-login">
             <div class="container-cadastro">
                 <div class="card-medio">
                     <h2>Você é realmente santista? Vamos ver!</h2>
                     <div class="quiz-container">
-                        <div style="display: block;" id="perguntaum">Contra qual time o santos foi campeão da libertadores 2011?
+                        <div style="display: block;" id="perguntaum">Contra qual time o santos foi campeão da libertadores 2011?<br>
                            <input  type="text" id="respum"> <button class="btnquiz" onclick="enviarum()">Enviar resposta</button>
                         </div>
                      
-                        <div style="display: none;" id="perguntadois">A faixa de capitão do santos tem um Z por qual motivo?
+                        <div style="display: none;" id="perguntadois">A faixa de capitão do santos tem um Z por qual motivo?<br>
                          <input type="text" id="respdois"> <button class="btnquiz" onclick="enviardois()">Enviar resposta</button>
                       </div>
                      
-                      <div style="display: none;" id="perguntatres">Segundo Muricy Ramalho nas categorias de base havia um jogador que se destacava mais que o Neymar Jr, quem era?
+                      <div style="display: none;" id="perguntatres">Segundo Muricy Ramalho nas categorias de base havia um jogador que se destacava 
+                        mais que o Neymar Jr, quem era?<br>
                          <input type="text" id="resptres"> <button class="btnquiz" onclick="enviartres()">Enviar resposta</button>
                       </div>
                      
-                      <div style="display: none;" id="perguntaquatro">Qual ano o Santos Futebol Clube foi fundado?
+                      <div style="display: none;" id="perguntaquatro">Qual ano o Santos Futebol Clube foi fundado?<br>
                          <input   type="text" id="respquatro"> <button class="btnquiz" onclick="enviarquatro()">Enviar resposta</button>
                       </div>
                      
                       <div style="display: none;" id="perguntacinco">Qual foi o jogador responsável pela maior venda da história do santos, 
-                         aproximadamente R$193.000.000,00 ?
+                         aproximadamente R$193.000.000,00 ?<br>
                          <input placeholder="insira aqui sua resposta" type="text" id="respcinco"> <button class="btnquiz" onclick="enviarcinco()">Enviar resposta</button>
                       </div>
                      
                        <div style="display: none;" id="resulta">
                     <a href="./fotossfc.html"><button class="btnquiz"></button></a> </div>
                        
-                </div>
+                </div> <button class="btnquiz" onclick="Mostrarrespostas()">Gabarito</button> 
+                <a href="./fotossfc.html"><button class="btnquizft">Clique aqui para ver as fotos</button></a>
             </div>
             </div>
         </div>
         <div class="footer-quiz">
-            <div class="container">
-                <h4>Feito por Gustavo Costa aluno Bandtec e torcedor do peixe, vai pra cima deles Santos!<br> Todos os direitos reservados. &copy;2021</h4>
+           
+                <h4>Feito por Gustavo Costa aluno Bandtec e torcedor do peixe, vai pra cima deles Santos!<br> Todos os direitos reservados. &copy;2021
+                </h4> <div class="container">
                 <div class="inones">
                     <a href="https://www.linkedin.com/in/gustavo-carneiro-090527180"><i class="fab fa-linkedin"></i></i></a>
                     <a href="https://github.com/GustaCosta"><i class="fab fa-github"></i></a>
                     <a href="https://www.instagram.com/gu.costa__/"><i class="fab fa-instagram"></i></i></a>
-                </div>
-            </div>
+                </div></div>
         </div>
   
 </body>
@@ -134,6 +136,12 @@ function enviarcinco () {
         <img src="./assets/comemoração.jpg" alt="">`
     }
 
+}
+function Mostrarrespostas(){
+
+for (let i = 0; i< respostas.length; i++) {
+ alert(`pergunta ${i+1} ${respostas[i]}`);
+    }    
 }
 
 
