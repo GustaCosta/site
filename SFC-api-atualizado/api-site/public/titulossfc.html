@@ -20,6 +20,8 @@
           
                 <li><a href="./index.html">Página inicial </a></li>
                 <li class="selecionado"><a href="./titulossfc.html">Titulos </a></li>
+                <li><a href="./fotossfc.html">Fotos</a></li>
+                <li><a href="./Quizsfc.html">Quiz</a></li>
                 <li><a href="./login.html">Login</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
@@ -30,19 +32,19 @@
         <div class="banner-titulos">
         <div class="container-titulos">
              <div class="card-titulos">
-               <img src="./assets/CampPaulista.png" alt=""> <p>22x CAMPEÃO PAULISTA</p>
+               <img onclick="sp()" src="./assets/CampPaulista.png" alt=""> <p>22x CAMPEÃO PAULISTA</p>
                 
                 
-                <img src="./assets/robinho2002.jpg" alt="">
-                <img src="./assets/Copadobrasil.jpeg" alt=""><p>9x CAMPEÃO NACIONAL (8 BRASILEIROS E 1 COPA DO BRASIL)</p>
+                <img onclick="brasileiro()" src="./assets/robinho2002.jpg" alt="">
+                <img onclick="copa()" src="./assets/Copadobrasil.jpeg" alt=""><p>9x CAMPEÃO NACIONAL (8 BRASILEIROS E 1 COPA DO BRASIL)</p>
                 
                
 
-             <img src="./assets/libertadores.jpeg" alt="">
-                <img src="./assets/./Pelé-1.jpg"style=";"> <p>TRI CAMPEÃO DA LIBERTADORES E CAMPEÃO DA RECOPA SUL-AMERICANA</p>
+             <img onclick="liberta()" src="./assets/libertadores.jpeg" alt="">
+                <img onclick="recopa()" src="./assets/./Pelé-1.jpg"style=";"> <p>TRI CAMPEÃO DA LIBERTADORES E CAMPEÃO DA RECOPA SUL-AMERICANA</p>
                 
                 
-               <img src="./assets/1963-11-16-Santos-1-x-0-Milan-ITA-14.jpg" alt=""> <p>BI CAMPEÃO MUNDIAL</p>
+               <img onclick="mundial()" src="./assets/1963-11-16-Santos-1-x-0-Milan-ITA-14.jpg" alt=""> <p>BI CAMPEÃO MUNDIAL</p>
              </div>
         </div>
     </div>
@@ -62,4 +64,23 @@
 </body>
 </html>
 <script>
+    function sp(){
+        alert('A escalação do último titulo paulista foi: Vanderlei, Victor Ferraz, Gustavo Henrique, David Braz e Zeca; Renato, Thiago Maia, Vitor Bueno (depois Paulinho) e Lucas Lima (Ronaldo Mendes); Gabriel (Joel) e Ricardo Oliveira.')
+    }
+    function brasileiro(){
+        alert(' Fábio Costa; Maurinho, Alex, André Luís, Léo, Paulo Almeida, Renato, Elano, Diego (Robert) (Michel), Robinho e William (Alexandre Silva)')
+
+    }
+    function copa(){
+        alert('Rafael, Pará, Edu Dracena, Durval e Alex Sandro; Arouca, Wesley e Ganso; Neymar (depois Marcel), Robinho (Rodriguinho) e André (Marquinhos).')
+    }
+    function liberta(){
+        alert(' Rafael; Danilo, Edu Dracena, Durval e Léo; Adriano, Arouca, Elano e Paulo Henrique Ganso; Neymar e Zé Love.')
+    }
+    function recopa(){
+        alert('Rafael, Bruno Peres, Bruno Rodrigo, Durval, Léo, Adriano, Arouca, Felipe Anderson, Pato Rodriguez, Neymar, André')
+    }
+    function mundial(){
+        alert('Gylmar, Olavo, Mauro, Calvet e Dalmo; Zito e Lima; Dorval, Coutinho, Pelé e Pepe')
+    }
 </script>
