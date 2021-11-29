@@ -135,6 +135,10 @@
             finalizarAguardar();
             return false;
         }
+        if(timeVar != 1962 && timeVar != 1999 && timeVar != 2002 && timeVar != 2010 && timeVar !=2017)
+        {
+            window.alert("Os anos devem ser: 1962 ou 1999 ou 2002 ou 2010 ou 2017")
+        }
 
         fetch("/usuarios/cadastrar", {
             method: "POST",
