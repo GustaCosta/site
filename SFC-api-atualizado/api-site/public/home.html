@@ -8,9 +8,112 @@
     <link rel="shortcut icon" href="./assets/mascotesfc.jpg" type="image/x-icon">
     <script src="https://kit.fontawesome.com/451870fbf6.js" crossorigin="anonymous"></script>
     <script src="./js/funcoes.js"></script>
+    <script> 
+    
+    function funccopadobrasil() {
+      fetch("/usuarios/funccopadobrasil").then(function (resposta) {
+          console.log("ESTOU NO THEN DO funccopadobrasil()!")
+          if (resposta.ok) {
+              resposta.json().then(function (resposta) {
+                  console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                  copadobrasil = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                  console.log(copadobrasil.copadobrasilbd);
+                  sessionStorage.COPADOBRASIL = copadobrasil.copadobrasilbd;
+
+              });
+          } else {
+              console.log("Dados recebidos: ", JSON.stringify(resposta));
+          }
+      }).catch(function (erro) {
+          console.log(erro);
+      })
+      return false;
+  }
+  function funcmundial() {
+      fetch("/usuarios/funcmundial").then(function (resposta) {
+          console.log("ESTOU NO THEN DO funcmundial()!")
+          if (resposta.ok) {
+              resposta.json().then(function (resposta) {
+                  console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                  mundial = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                  console.log(mundial.mundialbd);
+                  sessionStorage.MUNDIAL = mundial.mundialbd;
+
+              });
+          } else {
+              console.log("Dados recebidos: ", JSON.stringify(resposta));
+          }
+      }).catch(function (erro) {
+          console.log(erro);
+      })
+      return false;
+  }
+  function funcpaulista() {
+      fetch("/usuarios/funcpaulista").then(function (resposta) {
+          console.log("ESTOU NO THEN DO funcpaulista()!")
+          if (resposta.ok) {
+              resposta.json().then(function (resposta) {
+                  console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                  paulista = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                  console.log(paulista.paulistabd);
+                  sessionStorage.PAULISTA = paulista.paulistabd;
+
+              });
+          } else {
+              console.log("Dados recebidos: ", JSON.stringify(resposta));
+          }
+      }).catch(function (erro) {
+          console.log(erro);
+      })
+      return false;
+  }
+  function funcmessias() {
+      fetch("/usuarios/funcmessias").then(function (resposta) {
+          console.log("ESTOU NO THEN DO funcmessias()!")
+          if (resposta.ok) {
+              resposta.json().then(function (resposta) {
+                  console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                  messias = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                  console.log(messias.messiasbd);
+                  sessionStorage.MESSIAS = messias.messiasbd;
+
+              });
+          } else {
+              console.log("Dados recebidos: ", JSON.stringify(resposta));
+          }
+      }).catch(function (erro) {
+          console.log(erro);
+      })
+      return false;
+  }
+  function funcbrasileiro() {
+      fetch("/usuarios/funcbrasileiro").then(function (resposta) {
+          console.log("ESTOU NO THEN DO funcbrasileiro()!")
+          if (resposta.ok) {
+              resposta.json().then(function (resposta) {
+                  console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                  brasileiro = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                  console.log(brasileiro.brasileirobd);
+                  sessionStorage.BRASILEIRO = brasileiro.brasileirobd;
+
+              });
+          } else {
+              console.log("Dados recebidos: ", JSON.stringify(resposta));
+          }
+      }).catch(function (erro) {
+          console.log(erro);
+      })
+      return false;
+  }
+</script>
     <title>O mar está pra peixe</title>
 </head>
-<body>
+<body onload="funccopadobrasil(),funcmundial(), funcpaulista(), funcmessias(), funcbrasileiro()">
     <div class="header">
     
         <div class="container">
@@ -61,11 +164,11 @@
 
     var data = google.visualization.arrayToDataTable([
       ['Anos do Santos FC', 'Usuários'],
-      ['2010',     11],
-      ['1962',      2],
-      ['2002',  7],
-      ['2017', 2],
-      ['1999',    2]
+      ['2010',     Number(sessionStorage.COPADOBRASIL)],
+      ['1962',      Number(sessionStorage.MUNDIAL)],
+      ['2002',  Number(sessionStorage.BRASILEIRO)],
+      ['2017', Number(sessionStorage.PAULISTA)],
+      ['1999',    Number(sessionStorage.MESSIAS)]
     ]);
 
     var options = {

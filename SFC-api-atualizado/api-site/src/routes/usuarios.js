@@ -18,5 +18,20 @@ router.post("/cadastrar", function (req, res) {
 router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
+router.get("/funccopadobrasil", function (req, res) {
+    usuarioController.funccopadobrasil(req, res);
+});
+router.get("/funcmundial", function (req, res) {
+    usuarioController.funcmundial(req, res);
+});
+router.get("/funcpaulista", function (req, res) {
+    usuarioController.funcpaulista(req, res);
+});
+router.get("/funcmessias", function (req, res) {
+    usuarioController.funcmessias(req, res);
+});
+router.get("/funcbrasileiro", function (req, res) {
+    usuarioController.funcbrasileiro(req, res);
+});
 
 module.exports = router;
